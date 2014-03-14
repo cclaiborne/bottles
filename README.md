@@ -5,6 +5,8 @@ If you're seeing this README, we'd like you to complete the following two tasks:
 1. Answer all the question below.
 2. Submit code for the projects below.
 
+**IMPORTANT** Please do not fork this gist. If you do, other candidates will be able to see your code and benefit.
+
 ## Questions
 
 Please answer the following questions.
