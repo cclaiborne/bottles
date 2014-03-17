@@ -5,17 +5,18 @@ class BottlesSong
 
   def verse(number)
     bottle1, bottle2 = "bottles", "bottles"
-    verse_words = "#{number} #{bottle1} of beer on the wall, #{number} #{bottle1} of beer.\nTake one down and pass it around, #{number-1} #{bottle2} of beer on the wall.\n"
+    dry_1, dry_2 = "of beer on the wall", "of beer.\nTake one down and pass it around,"
+    verse_words = "#{number} #{bottle1} #{dry_1}, #{number} #{bottle1} #{dry_2} #{number-1} #{bottle2} #{dry_1}.\n"
       if number == 2
         bottle2 = "bottle"
-        verse_words = "#{number} #{bottle1} of beer on the wall, #{number} #{bottle1} of beer.\nTake one down and pass it around, #{number-1} #{bottle2} of beer on the wall.\n"
+        verse_words = "#{number} #{bottle1} #{dry_1}, #{number} #{bottle1} #{dry_2} #{number-1} #{bottle2} #{dry_1}.\n"
       elsif number == 1
         bottle1 = "bottle"
-        verse_words = "#{number} #{bottle1} of beer on the wall, #{number} #{bottle1} of beer.\nTake it down and pass it around, no more bottles of beer on the wall.\n"
+        verse_words = "#{number} #{bottle1} #{dry_1}, #{number} #{bottle1} of beer.\nTake it down and pass it around, no more bottles #{dry_1}.\n"
       elsif number == 0
-        verse_words = "No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n"
+        return "No more bottles #{dry_1}, no more bottles of beer.\nGo to the store and buy some more, 99 bottles #{dry_1}.\n"
       else
-        verse_words = "#{number} #{bottle1} of beer on the wall, #{number} #{bottle1} of beer.\nTake one down and pass it around, #{number-1} #{bottle2} of beer on the wall.\n"
+        return verse_words
       end
       return verse_words
   end
